@@ -1,0 +1,16 @@
+#munros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.munro {
+  padding: 2rem;
+  border: 5px solid blue;
+  margin: 2rem;
+  border-radius: 20px;
+}
+
+#map {
+  height: 500px;
+}
