@@ -21,14 +21,8 @@ MapView.prototype.init = function () {
 }
 
 MapView.prototype.bindEvents = function () {
-
   PubSub.subscribe('Munros:MunrosByRegion', (evt) => {
-    // leaflet.redraw()
-    // var markers = L.markerClusterGroup();
-    // markers.clearLayers()
-    // this.leafletMap.clearLayers()
-    // markers.clearLayers();
-    // map._panes.markerPane.remove();
+
     evt.detail.forEach((munro) => {
     const lat = munro.latlng_lat;
     const lng = munro.latlng_lng;
@@ -53,6 +47,7 @@ MapView.prototype.bindEvents = function () {
 // MapView.prototype.fitBounds = function (corners) {
 //   this.leafletMap.fitBounds(corners);
 // }
+
 
 MapView.prototype.addMarker = function (coords) {
   leaflet.marker(coords).addTo(this.leafletMap);
