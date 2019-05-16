@@ -6,8 +6,9 @@ const MunroListView = function (container) {
 }
 
 MunroListView.prototype.bindEvents = function () {
-  PubSub.subscribe('Munros:munros-data-ready', (event) => {
+  PubSub.subscribe('Munros:MunrosByRegion', (event) => {
     this.munros = event.detail
+    this.container.innerHTML = ""
     this.render()
   })
 };
